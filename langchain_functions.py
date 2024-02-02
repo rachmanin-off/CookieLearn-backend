@@ -1,5 +1,5 @@
 import os
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 from langchain.document_loaders.csv_loader import CSVLoader
 import pandas as pd
@@ -51,7 +51,7 @@ ko = HuggingFaceEmbeddings(
 )
 
 #document loader
-file1 = "C:/Users/Taehyun Lee/Documents/2024해커톤/example2.csv"
+file1 = "C:/Users/Taehyun Lee/Documents/2024해커톤/all_notext.csv"
 file2 = "C:/Users/Taehyun Lee/Documents/2024해커톤/df_sp_dropped.csv"
 file3 = "C:/Users/Taehyun Lee/Documents/2024해커톤/all_pairs.csv"
 
@@ -169,4 +169,4 @@ def langfunction(query): # query : str
         result2 = qa2.invoke(query)
         return(result2['result'])
     
-print(langfunction("총선에 대해 중립적인 기사로 요약해줘"))
+print(langfunction("금리 인상과 관련한 보수적인 기사를 추천해줘"))
